@@ -1,3 +1,21 @@
+.search-form-input {
+  background-color: #efefef;
+  border: none;
+  border-radius: 6px;
+  width: 80%;
+  font-size: 16px;
+  padding: 15px 20px;
+}
+
+.search-form-button {
+  background: #859f94;
+  padding: 15px 30px;
+  border: none;
+  font-size: 16px;
+  margin-left: 5px;
+  border-radius: 6px;
+  color: white;
+}
 .Weather {
   font-family: arial, sans-serif;
   border: 1px solid #dadde1;
@@ -5,12 +23,15 @@
   border-radius: 4px;
   color: rgb(135, 135, 135);
 }
-
+strong {
+  color: #a0838f;
+}
 .Weather h1 {
   font-size: 24px;
   font-weight: 100;
   margin: 20px 0 0 0;
   line-height: 29px;
+  color: black;
 }
 
 .Weather ul {
