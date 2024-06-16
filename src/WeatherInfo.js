@@ -5,35 +5,28 @@ import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo">
-      <h1>{props.data.city}</h1>
-      <ul>
-        <li>
-          <FormattedDate date={props.data.date} />
-        </li>
-        <li className="text-capitalize">{props.data.description}</li>
-      </ul>
-      <div className="row mt-3">
-        <div className="col-6">
-          <div className="d-flex">
-            <div>
-              <WeatherIcon code={props.data.icon} size={52} />
-            </div>
+    <div className="Weather-app-data">
+      <div className="weather-app-now">
+        <div>
+          <h1 className="weather-app-city">{props.data.city}</h1>
+          <p className="weather-app-details">
+            <FormattedDate date={props.data.date} />
 
-            <div>
-              <WeatherTemperature celsius={props.data.temperature} />
-            </div>
-          </div>
-        </div>
-        <div className="col-6">
-          <ul>
-            <li>
-              Humidity: <strong> {props.data.humidity}%</strong>
-            </li>
-            <li>
+            <span className="text-capitalize"> {props.data.description} </span>
+            <div className="descriptions">
+              Humidity: <strong> {props.data.humidity}%, </strong>
               Wind: <strong>{props.data.wind} km/h</strong>
-            </li>
-          </ul>
+            </div>
+          </p>
+        </div>
+        <div className="weather-app-temperature-container">
+          <span className="weather-app-icon">
+            <WeatherIcon code={props.data.icon} size={60} />
+          </span>
+
+          <span className="weather-app-temperature">
+            <WeatherTemperature celsius={props.data.temperature} />
+          </span>
         </div>
       </div>
     </div>
